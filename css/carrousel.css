@@ -1,0 +1,225 @@
+@import url("https://fonts.googleapis.com/css2?family=Muli:wght@400;500;600;700;800&display=swap");
+
+*{
+    margin:  0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+body {
+    font-size: 16px;
+    font-family: "Muli", sans-serif;
+    color: #fff;
+    background: linear-gradient(#fa591c,#772203);
+}
+a {
+    color: #fff;
+    transition: 0.2s color;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #e50914;
+}
+body::-webkit-scrollbar {
+    width: 8px;
+}
+body::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+header {
+    display: flex;
+    align-items: center;
+    max-width: 100%;
+    height: 80px;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    justify-content: space-between;
+  }
+
+  .is-hide {
+    display: none;
+  }
+
+  .new-recharge-buton {
+    margin-top: 15px;
+  }
+  
+  .is-visible {
+    display: block;
+  }
+  
+  .content-logo img {
+    width: 20%;
+  }
+
+ 
+.menu ul {
+    display: none;
+    list-style: none;
+    width: 100px;
+    position: absolute;
+    padding: 0;
+    text-align: right;
+    margin: 0;
+  }
+.menu:hover ul,  ul:hover  {
+  display: block;
+  z-index: 1;
+}
+
+.menu li, .menu a {
+    padding: 10px 0;
+    color: #fff;
+  }  
+  .menu li a:hover {
+    text-decoration: underline;
+  }
+
+  .profile img {
+    vertical-align: middle;
+    margin-right: 10px;
+    width: 40px;
+  }
+
+
+/*  Search  */
+
+.search-content {
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 70px;
+    padding: 150px;
+    background-position: center 40%;
+    background-size: cover;
+  }
+
+  .subtitle {
+    color: #fff;
+    font-size: 35px;
+    font-weight: bold;
+    -webkit-text-stroke: 0.5px #000;
+  }
+  
+  .search-content form {
+    width: 100%;
+    text-align: center;
+  }
+
+  .search-content input {
+    padding: 0 20px;
+    height: 50px;
+    border-radius: 50px;
+    border: 2px solid #fff;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    outline: none;
+    width: 80%;
+    transition: 0.2s border;
+  }
+
+  .search-content input:focus {
+    border: 2px solid transparent;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  .search-content input::placeholder {
+    color: #fff;
+    font-weight: 700;
+  }
+
+
+/* Carousel Animado */
+
+.carousel {
+    /* width: 100%; */
+    overflow: scroll;
+    padding: 30px;
+    position: relative;
+    display: flex;
+}
+
+.carousel__container {
+    white-space: nowrap;
+    /* Espacio entre los elementos */
+    margin: 70px 0px;
+    padding-bottom: 10px;
+    display: flex;
+    flex-flow: row wrap;
+    /* width: 100%; */
+}
+div .carousel-title   {
+  display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 30px;
+    /* padding: 10px; */
+    margin-top: -32;
+    margin-right: 3109;
+
+ 
+}
+.carousel__item  {
+   display: flex;
+   /* width: 250px;*/
+   height: 100vh; 
+   border-radius: 1%;
+   overflow: hidden;
+   margin-right: 10px;
+   display: inline-block;
+   cursor: pointer;
+   transition: 450ms all;
+   transform-origin: center left;
+   position: relative;
+}
+
+.carousel__item:hover ~ .carousel__item{
+    transform: translate3d(100px, 0 0);
+}
+
+.carousel__container:hover .carousel__item {
+    opacity: 0.3;
+}
+
+/*Factor de Crecimiento */
+.carousel__container:hover  .carousel__item:hover {
+  transform: scale(1.5);
+  opacity: 1;
+}
+.carousel-item__img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+.carousel-item__img:hover {
+    flex: 8;
+}
+.carousel-item__details {
+     background: linear-gradient(to top rgba(0, 0, 0, 0.9)0%, rgba(0, 0, 0)100%);
+     font-size: 10px;
+     opacity: 1;
+     transition: 450ms opacity;
+     position: absolute;
+     top:0;
+     left: 0;
+     right:0;
+     bottom:0;
+}
+.carousel-item__details--img {
+  width: 20px;
+}
+.carousel-item:hover .carousel-item__details {
+    opacity: 1;
+}
+  
+  .carousel-item__details--title {
+    color: white;
+    margin: 5px 0px 0px 0px;
+}
+  
+.carousel-item__details--subtitle {
+    color: white;
+    font-size: 8px;
+    margin: 3px 0px;
+}

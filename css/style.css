@@ -1,0 +1,401 @@
+/* #01A376 */
+*{
+    margin: 0;
+}
+body{
+    font-family: 'Acme', sans-serif;
+}
+ header {
+    background-color: #fa591c;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    /* Se los aliena el menu del user en la esquina */
+    justify-content: space-between;
+    align-items: center;
+}
+.header__image--profile img {
+   width: 150px;
+   min-height: 80px;
+   display: flex;
+   margin-top: 110px;
+   margin-left: 45px;
+   background-color: white;
+   border-radius: 95%;
+}
+.header__menu{
+    margin-right: 30px;
+}
+.header__menu  ul {
+    /* Oculta la lista */
+    display: none;
+    list-style:none;
+    padding: 0;
+    position: absolute;
+    width: 100px;
+    /* aliena text */
+    text-align: right;
+    margin: 0px 0px 0px -14px;
+   
+    
+}
+.header__menu:hover ul, ul:hover {
+    display: block;
+    
+}
+.header__menu li {
+    margin: 10px 0px;
+}
+.header__menu li a {
+   color:white;
+   /* Quitamos linea del Link */
+   text-decoration: none;
+}
+.header__menu li a:hover{
+    text-decoration:underline;
+}
+.header__menu--profile {
+    margin-right: 8px;
+    color:white;
+    display: flex;
+    align-items: center;
+}
+
+.header__menu--profile img {
+    margin-right: 8px;
+    width: 40px;
+}
+
+/* Buscador */
+
+.main-search {
+    display: flex;
+    /* justify-content: center;
+    align-content: center;
+    margin-bottom: 80px; */
+}
+
+.main__search--title {
+    color:white;
+    font-size: 23px;
+}
+
+.input {
+    background-color: rgba(255, 255, 255,0.2);
+    border: 2px solid #c0c3c7;
+    border-radius: 25px;
+    color:white;
+    font-size: 16px;
+    height: 50px;
+    /* separa el texto que hya dentro del buscuador */
+    padding: 0px 20px;
+    width: 60%;
+    outline: none;
+}
+::placeholder {
+    color:white;
+} 
+
+/* Inicio del Carrousel
+
+
+
+
+
+.carousel__item:hover ~ .carousel__item{
+    transform: translate(100px, 0, 0);
+}
+/* Opacacidad sea menor */
+.carousel__container:hover .carousel-item{ 
+    opacity: 1;
+}
+
+.carousel__container:hover .carousel-item:hover{
+  /* 1.5 va aumentar la imagen 50%
+  Cuando hagamos Hover el elemento especifico tenga la misma
+  iluminucidad */
+    transform: scale(1.5);
+    opacity: 1;
+}
+
+
+.carousel-item__details img{
+    height: 15px;
+}
+.carousel-item__details p{
+    margin: 2px;
+}
+.carouse-item_details--subtitle {
+    margin: 10px;
+}
+
+.carousel-item__details:hover {
+    opacity: 1;
+    color: white;
+} */
+
+/* Inicio Login */
+
+.login {
+    display:flex;
+    align-items: center;
+    justify-content:center;
+    /*los elemenotos vayan de arriba hacia abajo */
+    flex-direction: column;
+    background: linear-gradient(#fa591c,#772203);
+    padding: 0px 30px;
+    /*100 vh se basa en el porcentaje que esta viendo el usuario en la pantalla 
+    200px que se va exeptuando el header y el footer*/
+    min-height: calc(100vh -200px);
+}
+
+.login__container {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid transparent;
+    border-radius: 40px;
+    color:#fff;
+    padding: 60px 68px 40px;
+    height: 700px;
+    margin-bottom: 50px;
+    max-width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction: column;
+    margin:auto auto 200px 450px;
+    
+}
+
+.login__container--form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login__container--form  label {
+    font-size: 14px;
+}
+/*separa el recuerdame y el olvide contraseña */
+.login__container--remenber-me {
+    color:white;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.login__container--remenber-me a {
+    color:#fff;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.login__container--remenber-me a:hover {
+    color:#fff;
+    font-size: 14px;
+    text-decoration: underline;
+}
+/* Styles para boton */
+.login__container--social-media > div{
+    display: flex;
+    align-items: center;
+    font-size: 10px;
+    margin-bottom: 10px;
+   
+}
+.login__container--icon1:hover, .login__container--icon2:hover   {
+    cursor: pointer;
+    color:#fff;
+    text-decoration: underline;
+}
+
+.login__container--social-media > div{
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+.login__container--social-media > div > img{
+    width: 30px;
+    margin-right: 10px;
+}
+.login__container--register {
+    font-size: 14px;
+}
+
+.login__container--register a {
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+}
+.login__container--register a:hover {
+    color:#250000;
+    border:4 solid #c0c3c7;
+    text-decoration: underline;
+}
+.login__input {
+    background-color: transparent;
+    border-top: 0px;
+    border-right: 0px;
+    border-left: 0px;
+    border-bottom: 3px solid #fff;
+    outline: none;
+    margin-bottom: 20px;
+    padding: 0px 20px;
+    height: 50px;
+}
+::placeholder {
+    color:white;
+}
+.button {
+    background-color:#fa591c;
+    border-radius: 25px;
+    border: none;
+    color:#fff;
+    cursor: pointer;
+    font-size: 16px;
+    height: 50px;
+    letter-spacing: 1px;
+    margin:10px 0px;
+    padding: 15px;
+}
+
+.button:hover:hover {
+    background-color:#F04405;
+    border-radius: 25px;
+    border: none;
+    color:#fff;
+    cursor: pointer;
+    font-size: 16px;
+    height: 50px;
+    letter-spacing: 1px;
+    margin:10px 0px;
+    padding: 15px;
+}
+
+.button:focus {
+    background-color:#fa591c;
+   
+}
+.button:hover:active {
+    background-color:#fa591c;
+    background: linear-gradient(to bottom, #B43304, #FA4E0F);
+   
+}
+.footer {
+    background: linear-gradient(#fa591c,#772203);
+    align-items: center;
+    width: 100%;
+    height: 3rem;
+}
+
+.footer a {
+    margin:10px 15px;
+    color:#fff;
+    cursor: pointer;
+    text-decoration: none;
+   
+}
+.footer a:hover {
+    margin:10px 15px;
+    color:#fff;
+    cursor: pointer;
+    text-decoration: underline;
+   
+}
+@media only screen and (max-width:600px){
+    .login__container{
+        background-color: transparent;
+        border: none;
+        padding: 0px;
+        width: 100%;
+    }
+    .header__image--profile img {
+        max-width: 80px;
+        display: flex;
+        margin-top: 25px;
+        margin-bottom: 15px;
+        margin-left: 35px;
+        background-color: white;
+        border-radius: 95%;
+    }
+    .footer{
+        align-items: flex-start;
+        flex-direction: column;
+        width: 100%;
+        overflow-x: hidden;
+    }
+}
+.error-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(#fa591c,#772203);
+    overflow-x: hidden;
+}
+.error__container--title h2 {
+    font-size: 40px;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.animated {
+    animation-duration: 2.5s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+}
+
+@keyframes rubberBand {
+    0% {transform: scale(1);}
+    30% {transform: scaleX(1.25) scaleY(0.75);}
+    40% {transform: scaleX(0.75) scaleY(1.25);}
+    60% {transform: scaleX(1.15) scaleY(0.85);}
+    100% {transform: scale(1);}
+  }
+  .rubberBand {
+    animation-name: rubberBand;
+}
+
+
+.error__container--image  img {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 30%;
+    height: 50%;
+    margin: auto;
+    border: 4px solid #cbcdcf;
+    border-radius:15%;
+    
+}
+
+.error__container--image   p {
+    color:#fff;
+    display: flex;
+    font-size: 18px;
+    justify-content: center;
+   
+    
+}
+
+
+@media only screen and (max-width:768px){
+    .login__container{
+        background-color: transparent;
+        border: none;
+        padding: 0px;
+        width: 100%;
+    }
+    .header__image--profile img {
+        max-width: 80px;
+        display: flex;
+        margin-top: 30px;
+        margin-left: 25px;
+        background-color: white;
+        border-radius: 95%;
+    }
+    .footer{
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
